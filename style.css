@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+   --Light-Cyan: hsl(193, 38%, 86%);
+   --Neon-Green: hsl(150, 100%, 66%);
+   --Grayish-Blue: hsl(217, 19%, 38%);
+   --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+   --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    
+    background-color: var(--Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 0.1px);
+    flex-direction: column;
+}
+
+.main {
+    background-color: var(--Grayish-Blue);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    padding: 1.25rem 1.25rem 3rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+p,h1 {
+    text-align: center;
+    
+}
+
+h1{
+    color: var(--Neon-Green);
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+}
+
+p {
+    color: var(--Light-Cyan);
+    font-size: 28px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+picture img {
+    color: var(--Light-Cyan);
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+picture::before {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: var(--Light-Cyan);
+    right: 1.25rem;
+    bottom: 5rem;
+    position: absolute;
+    display: block;
+    z-index: 99;
+}
+  
+picture::after {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: var(--Light-Cyan);
+    left: 1.25rem;
+    bottom: 5rem;
+    position: absolute;;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+.dice-image {
+    background-color: var(--Neon-Green);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dice-image:hover {
+    background-color: hsl(150, 53%, 44%);
+}
+
+button {
+    user-select: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--Light-Cyan);
+}
+
+.attribution a {
+    color: hsl(228, 100%, 77%); 
+}
+
+@media (min-width: 500px) {
+    .container {
+      max-width: 480px;
+    }
+  }
